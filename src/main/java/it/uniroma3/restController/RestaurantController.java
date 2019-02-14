@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-public class restaurantController {
+public class RestaurantController {
     @Autowired
     private RestaurantService restaurantService;
     //Aggregate items
