@@ -1,6 +1,6 @@
-package it.uniroma3.repositories;
+package it.uniroma3.repository;
 
-import it.uniroma3.entity.Restaurant;
+import it.uniroma3.model.Restaurant;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

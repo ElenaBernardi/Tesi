@@ -1,18 +1,16 @@
 package it.uniroma3.restController;
 
 import it.uniroma3.Exception.RestaurantNotFoundException;
-import it.uniroma3.entity.Restaurant;
-import it.uniroma3.serivces.RestaurantService;
+import it.uniroma3.model.Restaurant;
+import it.uniroma3.serivce.IRestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.IOException;
 import java.util.List;
 
 @RestController
 public class RestaurantController {
     @Autowired
-    private RestaurantService restaurantService;
+    private IRestaurantService restaurantService;
     //Aggregate items
     //Restituisce tutti i ristoranti
     @GetMapping("/restaurants")
@@ -20,10 +18,10 @@ public class RestaurantController {
         return restaurantService.findAll();
     }
 
-    //crea un nuovo ristorante nel database e lo restituisce
+    //crea un nuovo ristorante nel database
     @PostMapping("/restaurants")
-    Restaurant newRestaurant(@RequestBody Restaurant newRestaurant) {
-        return restaurantService.save(newRestaurant);
+    void newRestaurant(@RequestBody Restaurant newRestaurant) {
+        restaurantService.save(newRestaurant);
     }
 
     //Single item

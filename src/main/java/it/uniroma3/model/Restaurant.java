@@ -1,13 +1,17 @@
-package it.uniroma3.entity;
+package it.uniroma3.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.GenerationType;
+
 
 @Entity
+@Table(name = "restaurants")
 public class Restaurant {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String address;
@@ -22,6 +26,7 @@ public class Restaurant {
         this.address = address;
     }
 
+    //getter and setter
     public Long getId() {
         return id;
     }
