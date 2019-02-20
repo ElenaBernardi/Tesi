@@ -25,12 +25,18 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    //swagger
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.0.1'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.0.2'
+    //spring
     compile 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.kafka:spring-kafka'
+    //postgres
     runtimeOnly 'org.postgresql:postgresql'
+    //test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.kafka:spring-kafka-test'
     testCompile group: 'junit', name: 'junit', version: '4.12'
