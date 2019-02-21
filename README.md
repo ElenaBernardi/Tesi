@@ -8,4 +8,4 @@ A questo punto entrambi i container dovrebbero essere attivi e l'applicazione in
 (se carica la pagina con un errore è tutto ok poichè non ci sono ristoranti nel db, mentre se da sito irraggiungibile qualcosa è andato storto).
 
 Per interrompere l'esecuzione eseguire stop_all_containers.sh
-Se eventualemente si vogliono cancella i container creati eseguire delete_all_container.sh
+Se eventualemente si vogliono cancellare i container creati eseguire delete_all_container.sh
